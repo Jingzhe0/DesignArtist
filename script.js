@@ -1,19 +1,46 @@
-// Smooth scroll
-document.querySelectorAll('a').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    });
-  });
+gsap.registerPlugin(ScrollTrigger);
+
+/* HERO INTRO */
+gsap.from(".hero-content h1", {
+  opacity: 0,
+  y: 40,
+  duration: 1.5
 });
 
-// Cursor glow effect
-const cursor = document.createElement("div");
-cursor.classList.add("cursor");
-document.body.appendChild(cursor);
+gsap.from(".hero-content p", {
+  opacity: 0,
+  delay: 0.5,
+  y: 20,
+  duration: 1
+});
 
-document.addEventListener("mousemove", e => {
-  cursor.style.left = e.clientX + "px";
-  cursor.style.top = e.clientY + "px";
+/* ABOUT */
+gsap.from(".about-text", {
+  scrollTrigger: ".about",
+  x: -100,
+  opacity: 0,
+  duration: 1
+});
+
+gsap.from(".about-img", {
+  scrollTrigger: ".about",
+  x: 100,
+  opacity: 0,
+  duration: 1
+});
+
+/* PROJECTS */
+gsap.from(".project-card", {
+  scrollTrigger: ".projects",
+  y: 80,
+  opacity: 0,
+  stagger: 0.2,
+  duration: 1
+});
+
+/* HERO PARALLAX */
+window.addEventListener("scroll", () => {
+  let scroll = window.scrollY;
+  document.querySelector(".hero-bg").style.transform =
+    `scale(1.2) translateY(${scroll * 0.3}px)`;
 });

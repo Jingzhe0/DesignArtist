@@ -1,87 +1,130 @@
 body {
   margin: 0;
-  font-family: 'Helvetica Neue', sans-serif;
-  background: #0a0a0f;
+  font-family: Arial, sans-serif;
+  background: #050507;
   color: white;
   overflow-x: hidden;
 }
 
-/* Navbar */
-.navbar {
+/* TOP BAR */
+.topbar {
   position: fixed;
+  top: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 20px 50px;
-  backdrop-filter: blur(10px);
-  z-index: 100;
+  backdrop-filter: blur(12px);
+  z-index: 1000;
 }
 
-/* Hero */
+.socials a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+  opacity: 0.6;
+}
+
+.socials a:hover {
+  opacity: 1;
+  color: #9333ea;
+}
+
+/* HERO */
 .hero {
   height: 100vh;
-  background: radial-gradient(circle at center, #111, #000);
+  position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
-/* Neon glow text */
+.hero-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("https://w0.peakpx.com/wallpaper/1009/34/HD-wallpaper-cool-pixel-art-background-ultra-games-other-games-background-cool-pixel-gameing-playhard.jpg") center/cover no-repeat;
+  
+  background-size: cover;
+  background-position: center;
+
+  image-rendering: auto;
+  filter: brightness(0.4) contrast(1.2) saturate(1.2);
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+}
+
 .hero h1 {
-  font-size: 6rem;
-  background: linear-gradient(90deg, #a855f7, #3b82f6, #ec4899);
+  font-size: 7vw;
+  background: linear-gradient(90deg,#9333ea,#3b82f6,#ec4899);
   -webkit-background-clip: text;
   color: transparent;
 }
 
-/* Buttons */
-button {
-  padding: 12px 30px;
-  border: none;
-  margin: 10px;
-  cursor: pointer;
+/* ABOUT */
+.about {
+  display: flex;
+  padding: 120px;
+  gap: 60px;
 }
 
-.primary {
-  background: linear-gradient(45deg, #9333ea, #3b82f6);
-  color: white;
-  box-shadow: 0 0 20px #9333ea;
+.about-text {
+  flex: 1;
 }
 
-.secondary {
-  background: transparent;
-  border: 1px solid #555;
+.about-img {
+  flex: 1;
+  background: url("https://png.pngtree.com/thumb_back/fh260/background/20240522/pngtree-arcade-retro-cyberpunk-generate-ai-image_15729770.jpg") center/cover;
+  border-radius: 12px;
 }
 
-/* Glassmorphism */
-.card, .member {
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(20px);
-  height: 200px;
-  transition: 0.3s;
+/* PROJECTS */
+.projects {
+  padding: 120px;
 }
 
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px #9333ea;
-}
-
-/* Grid */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.project-grid {
+  display: flex;
   gap: 20px;
 }
 
-/* Roadmap */
-.timeline {
-  display: flex;
-  justify-content: space-around;
+.project-card {
+  position: relative;
+  flex: 1;
+  text-decoration: none;
+  color: white;
+  overflow: hidden;
 }
 
-.node {
-  padding: 10px 20px;
-  border: 1px solid #9333ea;
-  box-shadow: 0 0 10px #9333ea;
+.project-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.project-card:hover img {
+  transform: scale(1.1);
+  filter: brightness(0.6);
+}
+
+.project-card span {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 18px;
+}
+
+/* FOOTER */
+.footer {
+  padding: 60px;
+  text-align: center;
+  opacity: 0.7;
+}
+
+.footer .bottom {
+  margin-top: 10px;
 }
