@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bhavya | 3D Artist</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Fonts -->
+  
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">BHAVYA</div>
+
+  <div class="menu-wrapper">
+    <div class="hamburger" onclick="toggleMenu()"><button class="ham"> ☰</button>
+     
+    </div>
+
+    <div class="menu" id="menu">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <video autoplay muted loop playsinline class="bg-video">
+    <source src="images/opening3.mp4" type="video/mp4">
+  </video>
+
+  <div class="overlay"></div>
+
+  <div class="hero-content">
+    <h1>BHAVYA CHAURASIA</h1>
+    <p>3D Artist • Level Designer</p>
+  </div>
+
+  <!-- QUOTE (ONLY FIRST PAGE) -->
+  <div class="quote">
+    Seekhne ka tareeka thoda painful raha… but still open for more lessons.
+  </div>
+
+</section>
+
+<!-- ABOUT (FULL SCREEN SCROLLABLE) -->
+<section id="about" class="section light">
+  <h2>About</h2>
+  <p>
+    I design immersive environments and gameplay spaces using Blender and Unreal Engine.
+    I focus on lighting, storytelling, and world building.
+    <br><br>
+    I am constantly learning and improving my craft in environment design.
+  </p>
+</section>
+
+<!-- WORK -->
+<section id="work" class="section light">
+  <h2>Selected Work</h2>
+
+  <div class="work-grid">
+
+    <div class="card">
+      <img src="images/2.jpeg">
+      <h3>Abandoned Facility</h3>
+    </div>
+
+    <div class="card">
+      <img src="images/3.jpeg">
+      <h3>Sci-Fi Corridor</h3>
+    </div>
+
+    <div class="card">
+      <img src="images/4.jpeg">
+      <h3>Jungle Ruins</h3>
+    </div>
+
+    <div class="card">
+      <img src="images/m1.jpeg">
+      <h3>Modular Level</h3>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT (VIDEO BACKGROUND) -->
+<section id="contact" class="contact">
+
+  <video autoplay muted loop playsinline class="bg-video">
+    <source src="images/opening3.mp4" type="video/mp4">
+  </video>
+
+  <div class="overlay"></div>
+
+  <div class="contact-content">
+    <div class="contact-left">
+      <h2>Work Enquiries</h2>
+      <p class="email">my@gmail.com</p>
+
+      <div class="socials">
+        <a href="#">LinkedIn</a>
+        <a href="#">Instagram</a>
+      </div>
+    </div>
+
+    
+  </div>
+
+</section>
+
+<!-- BOTTOM LEFT QUOTE -->
+<div class="quote">
+  Seekhne ka tareeka thoda painful raha… but still open for more lessons.
+</div>
+
+<!-- MENU SCRIPT -->
+<script>
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
